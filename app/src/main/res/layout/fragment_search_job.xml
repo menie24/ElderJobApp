@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchJobFragment">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/jobAnnouncementNavigationView"
+        android:layout_width="390dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="20dp"
+        android:background="#F9F9F9"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/profileTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sniglet"
+            android:gravity="center"
+            android:text="ค้นหางาน"
+            android:textAlignment="center"
+            android:textColor="#122965"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+            app:layout_constraintVertical_bias="0.95" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="358dp"
+        android:layout_height="596dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/jobTypeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ประเภทงาน"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/jobTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/searchTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="คำค้นหา"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/searchTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search_text"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/workLocationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:fontFamily="@font/sniglet"
+                    android:text="สถานที่ปฏิบัติงาน"
+                    android:textAlignment="center"
+                    android:textColor="#49454F"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/provinceTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="จังหวัด"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/provinceSearchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/district2TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="อำเภอ/เขต"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/districtSearchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/subdistrict2TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ตำบล/แขวง"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/subdistrictSearchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="185dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/primary_btn"
+                    android:text="ค้นหา"
+                    android:textColor="#FEFEFE"
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

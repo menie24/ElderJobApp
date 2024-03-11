@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobRecipientsListViewActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/jobNameList"
+            android:layout_width="310dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="แม่บ้าน,พนักงานขาย"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/jobName"
+            android:layout_width="51dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="อาชีพ"
+            android:textColor="#45A2F3"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/jobNameList"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="240dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="อรวรรณ สุขใจ"
+            android:textColor="#122965"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/yearText"
+            android:layout_width="25dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="ปี"
+            android:textColor="#45A2F3"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobNameList"
+            app:layout_constraintEnd_toStartOf="@+id/genderText"
+            app:layout_constraintTop_toBottomOf="@+id/fullname"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="หญิง"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobNameList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullname"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_width="37dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="เพศ"
+            android:textColor="#45A2F3"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobNameList"
+            app:layout_constraintEnd_toStartOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@+id/fullname"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="38dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="อายุ"
+            android:textColor="#45A2F3"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobNameList"
+            app:layout_constraintEnd_toStartOf="@+id/age"
+            app:layout_constraintTop_toBottomOf="@+id/fullname"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="26dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:text="60"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobNameList"
+            app:layout_constraintEnd_toStartOf="@+id/yearText"
+            app:layout_constraintTop_toBottomOf="@+id/fullname"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="750dp"
+            app:layout_constraintBottom_toTopOf="@+id/jobName"
+            app:layout_constraintEnd_toStartOf="@+id/fullname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity3">
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawableTint="#45A2F3"
+        android:gravity="center"
+        android:text="ย้อนกลับ"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="354dp"
+        android:layout_height="650dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jobExperienceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประวัติการทำงาน"
+                android:textAlignment="center"
+                android:textColor="#49454F"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/infoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="โปรดระบุอย่างน้อย 1 งาน"
+                android:textAlignment="textStart"
+                android:textColor="#0241FF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/job1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="งานที่ 1"
+                android:textAlignment="textStart"
+                android:textColor="#49454F"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/typeJob1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประเภทงาน"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/errorJobTypeHistOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="โปรดเลือกประเภทงาน"
+                android:textColor="#D11A41"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/typeJobSpinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                tools:listitem="@layout/list_item" />
+
+            <TextView
+                android:id="@+id/occupation1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="อาชีพ"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/jobNameInput1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/experience1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประสบการณ์"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/experienceInput1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/job2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="งานที่ 2"
+                android:textAlignment="textStart"
+                android:textColor="#49454F"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/typeJob2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประเภทงาน"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <Spinner
+                android:id="@+id/typeJobSpinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                tools:listitem="@layout/list_item" />
+
+            <TextView
+                android:id="@+id/occupation2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="อาชีพ"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/jobNameInput2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/experience2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประสบการณ์"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/experienceInput2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/job3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="งานที่ 3"
+                android:textAlignment="textStart"
+                android:textColor="#49454F"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <TextView
+                android:id="@+id/typeJob3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประเภทงาน"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <Spinner
+                android:id="@+id/typeJobSpinner3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                tools:listitem="@layout/list_item" />
+
+            <TextView
+                android:id="@+id/occupation3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="อาชีพ"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/jobNameInput3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/experience3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:text="ประสบการณ์"
+                android:textColor="#45A2F3"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                app:layout_constraintVertical_bias="0.95" />
+
+            <EditText
+                android:id="@+id/experienceInput3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveFormButton"
+                android:layout_width="152dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/primary_btn"
+                android:text="ยืนยัน"
+                android:textColor="#FEFEFE"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

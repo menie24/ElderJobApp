@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.JobFormFragment">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/jobAnnouncementNavigationView"
+        android:layout_width="407dp"
+        android:layout_height="64dp"
+        android:background="#F9F9F9"
+        app:layout_constraintBottom_toTopOf="@+id/frame_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/profileTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sniglet"
+            android:gravity="center"
+            android:text="ฟอร์มประกาศงาน"
+            android:textAlignment="center"
+            android:textColor="#122965"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+            app:layout_constraintVertical_bias="0.95" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="347dp"
+        android:layout_height="598dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="586dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/institutionNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ชื่อสถานประกอบการ"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/institutionNameFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/provinceFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="จังหวัด"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <TextView
+                    android:id="@+id/errorJobTypeHistOutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="โปรดเลือกจังหวัด"
+                    android:textColor="#D11A41"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Spinner
+                    android:id="@+id/provinceFormSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/districtFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="อำเภอ/เขต"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <TextView
+                    android:id="@+id/errorDistrictOutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="โปรดเลือกอำเภอ/เขต"
+                    android:textColor="#D11A41"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Spinner
+                    android:id="@+id/districtFormSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/subdistrictFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ตำบล/แขวง"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <TextView
+                    android:id="@+id/errorSubDistrictOutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="โปรดเลือกตำบล/แขวง"
+                    android:textColor="#D11A41"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Spinner
+                    android:id="@+id/subdistrictFormSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/addressDetailFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="รายละเอียดที่อยู่"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/addressDetailFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/jobNameFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ตำแหน่งงาน"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/jobNameFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/jobTypeFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ประเภทงาน"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <TextView
+                    android:id="@+id/errorJobTypeOutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="โปรดเลือกประเภทงาน"
+                    android:textColor="#D11A41"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Spinner
+                    android:id="@+id/jobTypeFormSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    tools:listitem="@layout/list_item" />
+
+                <TextView
+                    android:id="@+id/salaryFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="เงินเดือน"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/salaryFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/requiementFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="คุณสมบัติผู้สมัคร"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/requiementFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/benefitFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="สวัสดิการ"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/benefitFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/jobDetailFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="รายละเอียดงาน"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/jobDetailFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/contactNameFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ชื่อผู้ติดต่อ"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/contactNameFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/phoneFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="เบอร์โทร"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/phoneFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/emailFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="อีเมล"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/emailFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/typeFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="ประเภทประกาศ"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/maleRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="รับจำกัด"
+                                android:textSize="25sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/femaleRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="รับไม่จำกัด"
+                                android:textSize="25sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/expiredDateFormTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sniglet"
+                    android:text="วันที่สิ้นสุดประกาศ"
+                    android:textColor="#45A2F3"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.147"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <EditText
+                    android:id="@+id/expireDateFormInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="เลือกวันที่"
+                    android:inputType="date"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <Button
+                    android:id="@+id/saveFormButton"
+                    android:layout_width="185dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="120dp"
+                    android:background="@drawable/primary_btn"
+                    android:text="ประกาศงาน"
+                    android:textColor="#FEFEFE"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobListViewActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/announcementDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="02/01/2567"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobType1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <TextView
+            android:id="@+id/jobType1"
+            android:layout_width="379dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:text="บริษัท แน็พพาร์คโฮสเทล จำกัด"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/districtAndProvince"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="381dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:text="แม่บ้าน"
+            android:textColor="#122965"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/jobType1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/announcementDate"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/salary"
+            android:layout_width="332dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_weight="1"
+            android:text="18,000 บาท"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/moneyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/salary"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#45A2F3" />
+
+        <TextView
+            android:id="@+id/districtAndProvince"
+            android:layout_width="332dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:text="พระนคร จ.กรุงเทพมหานคร"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/salary"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/locationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toTopOf="@+id/moneyIcon"
+            app:layout_constraintEnd_toStartOf="@+id/districtAndProvince"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#45A2F3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

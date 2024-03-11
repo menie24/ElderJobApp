@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".LogoMainActivity">
+
+    <ImageView
+        android:id="@+id/logoImaveView"
+        android:layout_width="287dp"
+        android:layout_height="247dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="102dp"
+        android:src="@drawable/logo_university"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoImaveView2"
+        android:layout_width="398dp"
+        android:layout_height="328dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/tsri_logo"
+        app:layout_constraintBottom_toTopOf="@+id/logoImaveView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

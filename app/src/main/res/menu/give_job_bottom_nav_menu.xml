@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/job_announcement"
+        android:icon="@drawable/job_announcement"
+        android:title="ประกาศงาน" />
+
+    <item
+        android:id="@+id/search_job_recipients"
+        android:icon="@drawable/search_job_recipients"
+        android:title="ค้นหาผู้รับงาน" />
+
+    <item
+        android:id="@+id/create_announcement"
+        android:icon="@drawable/create_announcement"
+        android:title="สร้างประกาศ" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/my_profile"
+        android:title="โปรไฟล์" />
+
+</menu>

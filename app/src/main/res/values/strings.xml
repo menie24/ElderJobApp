@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ElderJobApp</string>
+    <string name="select">Select Item</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_job_recipients_list_view">JobRecipientsListViewActivity</string>
+</resources>

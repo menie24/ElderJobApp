@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "992367969036",
+    "project_id": "elderjobapp",
+    "storage_bucket": "elderjobapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992367969036:android:827e8a69aa09de85ecff29",
+        "android_client_info": {
+          "package_name": "com.example.elderjobapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwjEhkBz2_vhgjTRqC1duiHQvLNwGm_es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
